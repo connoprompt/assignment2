@@ -24,7 +24,7 @@ class Weather extends React.Component {
                 city: data.location.name,
                 temp: data.current.temperature,
                 wind: data.current.wind_speed,
-                
+                 
             })
         });
 
