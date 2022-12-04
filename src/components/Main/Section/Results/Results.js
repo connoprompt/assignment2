@@ -1,8 +1,9 @@
 import React from "react";
 import TableCreate from "../TableCreate/TableCreate";
 
-export default function ResultsTable() {
+export default function Results() {
 
+    const tableCaption ="Latest Match Results"
     const tableData = [
         {sport: "Football", home: "Bendigo Football Club", away: "Strathdale Football Club", homeScore: 30, awayScore: 25, winner: "Bendigo Football Club"},
         {sport: "Netball", home: "Golden Square Netball Club", away: "California Gully Netball Club", homeScore: 8, awayScore: 12, winner: "Golden Square Netball Club"},
@@ -14,7 +15,7 @@ export default function ResultsTable() {
     
     return (
         <div className="results_container">
-            <TableCreate className="results_table" arr={tableData} />
+            <TableCreate className="results_table" caption={tableCaption} arr={tableData} />
         </div>
     );
 } 

@@ -1,17 +1,15 @@
 import React from "react";
 
 export default function TableCreate(props) {
-    const tableData = [];
-    const headData = [];
-    const arrKeys = props.arr[0];
-    const arrData = props.arr;
-    const keys = Object.keys(arrKeys);
+    const arrKeys = props.arr[0]; //Returns the first line of the array data from the component that calls this component
+    const arrData = props.arr; // Returns the full array of data from the component that calls this component
+    const tableData = []; // Hold filtered table data
 
     //For each key in the arrKeys array add the td tag and add it to the headData array.
-    keys.forEach(key => {
-        headData.push(<th><td>{key}</td></th>);
+    const headData = Object.keys(arrKeys).map(key => {
+        return <th>{key}</th>;
     });
-    
+
     //For each Object in the data array, extract the key value from each element in the object, surround it with td tags and add it to a temp array. Then add the temp arr to the tableData array surrounded with a table row using TR tags 
     arrData.forEach(object => {
         let arr = [];
@@ -21,20 +19,11 @@ export default function TableCreate(props) {
         tableData.push(<tr>{arr}</tr>);
     });
 
-    const newArr = [1,2,3,4,5];
-
-    const outputArr = newArr.map(multiply());
-
-    function multiply(x) {
-        return x * 2;
-    }
-
-    console.log(outputArr);
-
     return (
         <table>
-            {headData}
-            {tableData}
+            <caption>{props.caption}</caption>
+            <thead>{headData}</thead>
+            <tbody>{tableData}</tbody>
         </table>
     )
 }
