@@ -1,5 +1,12 @@
 import React from "react";
 
+/*
+This is another one of my favourite components, you've already seen this component but I've moddifed the first loop to use .map instead.
+I tried for awhile to get .map working on the second loop but implementing it on an object was taking up to much time so this works for now. 
+
+This component is designed to take an array of key value pairs from the component that calls it and turn those values into a table. 
+*/
+
 export default function TableCreate(props) {
     const arrKeys = props.arr[0]; //Returns the first line of the array data from the component that calls this component
     const arrData = props.arr; // Returns the full array of data from the component that calls this component

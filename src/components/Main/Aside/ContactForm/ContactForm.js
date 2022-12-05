@@ -1,6 +1,8 @@
 import React from "react";
 import useForm from "./useForm";
 
+//This component is designed for the user form, it takes the input and lets the user know what was submitted using my custom hook useForm.
+
 
 export default function ContactForm() {
 

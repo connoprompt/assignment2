@@ -1,6 +1,8 @@
 import React from "react";
 import TableCreate from "../TableCreate/TableCreate";
 
+//This component is displaying the match timetable implemting the timetable feature
+
 export default function Main() {
     const tableCaption = "Match Timetable";
     const tableData = [

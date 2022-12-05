@@ -1,6 +1,8 @@
 import React from "react";
 import TableCreate from "../TableCreate/TableCreate";
 
+//This compontent is returning the match results, implementing the results table feature
+
 export default function Results() {
 
     const tableCaption ="Latest Match Results"

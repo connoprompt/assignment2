@@ -1,5 +1,7 @@
 import React from "react";
 
+//This component is returning a sports list, it satisfies the sports list feature.
+
 export default function SportsList() {
 
     const sports = ['Netball','Football','Soccer','Squash','Tennis'];

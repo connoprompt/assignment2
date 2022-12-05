@@ -1,5 +1,12 @@
 import React from "react";
 
+/*This component is one of my favourite ones. It shows the current weather of my location Bendigo, using the weatherstack API. It calls the weather api, 
+stores those values in a data array and then presents those values as a custom div. I am quite proud of this one. It satisfies the weather forecast feature.
+
+I wanted to implement a 3 day forecast but weather stack require payment to get weekly forecast data. 
+
+*/
+
 class Weather extends React.Component {
 
     constructor(props) {

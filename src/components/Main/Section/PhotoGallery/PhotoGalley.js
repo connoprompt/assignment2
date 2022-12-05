@@ -2,6 +2,7 @@ import React from "react";
 
 export default function PhotoGallery() {
 
+    //This compontent is displaying two teams headshot photos, satisfying the photo gallery feature
 
     return (
         <div className="photo_gallery">
