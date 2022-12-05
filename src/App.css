@@ -1,13 +1,22 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html, body, #root, .App {
+html,
+body,
+#root,
+.App {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+body {
+  margin: 0;
 }
 
 .App {
@@ -34,7 +43,6 @@ html, body, #root, .App {
   margin-left: 40px;
   margin-right: 40px;
   background-color: #e3dbdb;
-  opacity: 0.91;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,53 +51,92 @@ html, body, #root, .App {
   border-top: 1px solid black;
 }
 
-.Nav  {
+.Nav {
   display: flex;
-  flex-flow: row, wrap;
-  opacity: 1;
-  justify-content: left;
+  flex-flow: row;
+  justify-content: flex-start;
   background-color: #29a358;
 }
 
+
 .Main {
-  display:  flex;
+  display: flex;
   flex-direction: row;
   opacity: 1;
   flex-grow: 1;
   border-top: 1px solid black;
-  padding-left: 15px;
 }
 
 .Section {
   flex-grow: 1;
+  margin: 10px;
 }
 
 .Aside {
-  min-width: 400px;
+  width: auto;
   border-left: 1px solid black;
-  padding-left: 15px;
-
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.contactFormContainer {
-  min-width: 100px;
-  width: 100px;
-}
-
-.btnContainer {
-  padding-left: 5px;
-  padding-right: 5px;
-  height: 50px;
-  min-width: 100px;
+.Location {
+  width: 350px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-right: 1px solid black;
-  background-color: #29a358;
 }
 
-.Copyright {
+#locationHeader {
+  margin-bottom:5px;
+  margin-top:0;
+  text-align: center;
+}
+
+.Weather {
+  text-align: center;
+  border-style: double;
+  border-color:hsla(hue, saturation, lightness, alpha);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #96b5e3;
+}
+
+h2 {
+  margin-block-start: 2px;
+  margin-block-end: 2px;
+}
+
+h4 {
+  margin-block-start: 4px;
+  margin-block-end: 4px;
+}
+
+#iconContainer {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#weatherIcon {
+  margin-left: 5px;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+}
+
+#tempContainer {
+  text-align: center;
+}
+
+#rainContainer {
+  text-align: center;
+}
+
+.contactFormContainer {
+  width: 350px;
 }
 
 .Footer {
@@ -98,4 +145,128 @@ html, body, #root, .App {
   min-height: 40px;
   flex: row;
   justify-content: left;
+}
+
+.Copyright {
+  display: flex;
+}
+
+
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 350px;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.mapouter {
+  height: 350px;
+  width: 350px;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  padding-left: 20px;}
+
+#team1 {
+  display: flex;
+  flex-direction: row;
+}
+
+#team2 {
+  display: flex;
+  flex-direction: row;
+}
+
+#team1Name {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+}
+
+#team2Name {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+}
+
+
+
+.results_container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+p {
+  margin-block-start: 2px;
+  margin-block-end: 2px;
+}
+
+
+.timetable_table_component {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sports_list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ul {
+  display: inline-block;
+}
+
+button {
+  background-color: #29a358;
+  border: none;
+}
+
+button:hover {
+  background-color:#57886c;
+  border: 1px solid
+}
+
+button:active {
+  background-color:#96b5e3;
+}
+
+.btnStyle {
+  width: 150px;
+  height: 50px;
+  border-right: 1px solid black;
+}
+table {
+  width: 100%;
+  margin-top: 5px;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 4px;
+}
+
+tr:nth-child(even){
+  background-color: #29a358;
+}
+
+tr:nth-child(odd) {
+  background-color: #57886c;
+}
+
+th {
+  background-color:#e3dbdb;
 }

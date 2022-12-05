@@ -12,6 +12,7 @@ export default function Main() {
 
     return (
         <div className="timetable_table_component">
+            <h2>See the timetable for the lastest matches</h2>
             <TableCreate caption={tableCaption} arr={tableData} />
         </div>
     );

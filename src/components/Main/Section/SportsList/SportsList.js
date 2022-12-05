@@ -7,6 +7,7 @@ export default function SportsList() {
 
     return (
         <div className="sports_list">
+            <h1>Steele Sports Portal supports the following sports</h1>
             <ul>{sportsList}</ul>
         </div>
     );

@@ -15,6 +15,7 @@ export default function Results() {
     
     return (
         <div className="results_container">
+            <h2>Match Results below</h2>
             <TableCreate className="results_table" caption={tableCaption} arr={tableData} />
         </div>
     );
