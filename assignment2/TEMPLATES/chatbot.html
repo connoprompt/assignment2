@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Chatbot
-        </title>
-    </head>
-    <body>
-       {{ form }}
-    </body>
+
+<head>
+    <title>
+        Chatbot
+    </title>
+</head>
+
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Let's Chat</button>
+    </form>
+</body>
+
 </html>
