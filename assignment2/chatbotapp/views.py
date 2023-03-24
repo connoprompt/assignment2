@@ -8,8 +8,7 @@ from pprint import pprint
 
 class ChatForm(forms.Form):
 
-    text_field = forms.CharField(label='', max_length=100)
-    text_area = forms.CharField(widget=forms.Textarea(attrs={'rows': '2', 'cols': '20'}))
+    text_area = forms.CharField(widget=forms.Textarea(attrs={'rows': '2', 'cols': '20'}), label='What would you like to do today?')
     
 
 
@@ -22,9 +21,9 @@ class ChatBot(View):
     def get(self, request):
         
         template = 'chatbot.html'
-        form = ChatForm()
+        posted_form = ChatForm()
     
-        return render(request, template, {'form': form})
+        return render(request, template, {'form': posted_form})
 
     def post(self, request):
         lex_client = boto3.client('lex-runtime')
@@ -35,7 +34,7 @@ class ChatBot(View):
             
             form = ChatForm(request.POST)
             if form.is_valid():
-                text = form.cleaned_data['text_field']
+                text = form.cleaned_data['text_area']
                 response = lex_client.post_text(
                     botName='TravelBot',
                     botAlias='$LATEST',
@@ -43,11 +42,10 @@ class ChatBot(View):
                     inputText=text
                 )
                 if response['intentName'] == 'BookFlight':
-                    
-                    form.text_area.clean(response['message'])
-                    form.text_field.clean()                    
-                    
-                    return render(request, template, {'form': form})
+                    response_form = ChatForm()
+                    response_form['text_area'].label = response['message']
+            
+                    return render(request, template, {'form': response_form})
                 pprint(response)
             
             
