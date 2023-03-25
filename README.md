@@ -4,13 +4,15 @@ The working branch of my Django web server that hosts a chatbot app.
 
 1. To run this code, download as a zipped folder. 
 
-2. Extract the folder and open the folder in your preferred IDE. Ensure that you activate the virtual environment beforing attempting to conitnue. The Activate script is located at assignment2/.venu/Scripts/Activate.ps1
+2. Extract the folder and open the folder in your preferred IDE. If asked to trust the folder, click trust. 
 
-3. Once the venv is activated, navigate to the inner assignment2 directory. You're working dir should be /assignment2/assignment2. 
+3. Ensure that you activate the virtual environment beforing attempting to conitnue. The Activate script is located at assignment2/.venu/Scripts/Activate.ps1
 
-4. Once in the directory, in a terminal type 'python manage.py runserver', this will launch the django server. 
+4. Once the venv is activated, navigate to the inner assignment2 directory. You're working dir should be /assignment2/assignment2. 
 
-Once the server is runnning, you may open a browser and navigate to localhost:8000/chatbot
+5. Once in the directory, in a terminal type 'python manage.py runserver', this will launch the django server. 
+
+6. Once the server is runnning, you may open a browser and navigate to localhost:8000/chatbot
 
 You will see a simple text box asking you what you want to do. 
 
