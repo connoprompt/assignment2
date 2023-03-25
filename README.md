@@ -6,13 +6,13 @@ The working branch of my Django web server that hosts a chatbot app.
 
 2. Extract the folder and open the folder in your preferred IDE. If asked to trust the folder, click trust. 
 
-3. Ensure you run the project in to virtual environment, once in your python environment of choice, the following modules need to be installed using pip. 
+3. The modules below must be installed for this project to run, if any of these modules interfare with your current python environment please create a virtual environment with the projects root folder as the root. 
 
 - Django
 - pytest-django
 - boto3
 
-5. Once the modules are installted, in a terminal type 'python manage.py runserver', this will launch the django server. 
+5. Once the modules are installed, in a terminal type 'python manage.py runserver', this will launch the django server. 
 
 6. Once the server is runnning, you may open a browser and navigate to localhost:8000/chatbot
 
@@ -42,3 +42,7 @@ I want to book a hotel room.
 I want to book a room.
 I would like to book accommodation.
 I would like to book a hotel room.
+
+Once the bot goes through the required slots it will restart and ask you if you would like to do something else. 
+
+7. After you are done, in your terminal press Ctrl - C to shutdown the django server. You can then exit the IDE or project. 
