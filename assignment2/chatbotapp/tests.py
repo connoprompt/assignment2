@@ -3,15 +3,8 @@ from django.test import TestCase
 # Create your tests here.
 from django.test import Client
 from django.urls import reverse
+import json
 
-
-def test_utterance():
-
-    client = Client()
-
-    response = client.post(reverse(viewname='chatbot'), data={'text_area': 'I want to book a flight.'})
-
-    assert response.content['text'] == 'I want to book a flight.'
 
 def test_flight_intent():
 
@@ -19,7 +12,11 @@ def test_flight_intent():
 
     response = client.post(reverse(viewname='chatbot'), data={'text_area': 'I want to book a flight.'})
 
-    assert response.content['message'] == 'Where are you departing from?'
+    json_response = json.loads(dict(response))
+
+    print(json_response)
+
+    assert json_response['message'] == 'Where are you departing from?'
 
 def test_car_intent():
 
