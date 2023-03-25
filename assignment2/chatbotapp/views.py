@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.views import View
 from django import forms
-import json
 import boto3
 from pprint import pprint
 
@@ -10,11 +9,6 @@ class ChatForm(forms.Form):
 
     text_area = forms.CharField(widget=forms.Textarea(
         attrs={'rows': '2', 'cols': '20'}), label='What would you like to do today?')
-
-
-# Create your views here.
-def home(request):
-    return render(request, 'home.html')
 
 
 class ChatBot(View):
@@ -44,7 +38,7 @@ class ChatBot(View):
                     inputText=text
                 )
 
-                # If API response returns a fulfilled dialog state, the form will restart and ask the user what they wish to do.
+                # If API response returns a fulfilled dialog state, the form will restart and ask the user what they wish to do otheerwise, slot replies will continue until the conversation is fulfilled. 
                 if response['dialogState'] == 'Fulfilled':
                     restart_form = ChatForm()
 
