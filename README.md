@@ -6,14 +6,13 @@ The working branch of my Django web server that hosts a chatbot app.
 
 2. Extract the folder and open the folder in your preferred IDE. If asked to trust the folder, click trust. 
 
-3. Ensure you run the project in to virtual environment, once in your python environment of choice, the following modules need to be installed. 
+3. Ensure you run the project in to virtual environment, once in your python environment of choice, the following modules need to be installed using pip. 
 
 - Django
 - pytest-django
+- boto3
 
-4. Once the venv is activated, navigate to the inner assignment2 directory. You're working dir should be /assignment2/assignment2. 
-
-5. Once in the directory, in a terminal type 'python manage.py runserver', this will launch the django server. 
+5. Once the modules are installted, in a terminal type 'python manage.py runserver', this will launch the django server. 
 
 6. Once the server is runnning, you may open a browser and navigate to localhost:8000/chatbot
 
