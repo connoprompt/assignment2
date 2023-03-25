@@ -6,7 +6,10 @@ The working branch of my Django web server that hosts a chatbot app.
 
 2. Extract the folder and open the folder in your preferred IDE. If asked to trust the folder, click trust. 
 
-3. Ensure that you activate the virtual environment beforing attempting to conitnue. The Activate script is located at assignment2/.venu/Scripts/Activate.ps1
+3. Ensure you run the project in to virtual environment, once in your python environment of choice, the following modules need to be installed. 
+
+- Django
+- pytest-django
 
 4. Once the venv is activated, navigate to the inner assignment2 directory. You're working dir should be /assignment2/assignment2. 
 
